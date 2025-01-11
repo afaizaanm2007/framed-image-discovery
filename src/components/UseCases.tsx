@@ -22,7 +22,7 @@ const useCases = [
     title: "Yearbook Creation Suite",
     description:
       "Empower yearbook staff with AI-powered image organization, smart tagging, and automated caption generation.",
-    image: "photo-1588072432836-e10032774350",
+    image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
     icon: <Image className="w-6 h-6 text-purple-500" />,
     link: "/yearbook-catalog",
     features: [
@@ -36,7 +36,7 @@ const useCases = [
     title: "Sports Highlights Platform",
     description:
       "Create personalized digital albums for parents featuring their children's sports moments and achievements.",
-    image: "photo-1515238152791-8216bfdf89a7",
+    image: "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7",
     icon: <Users className="w-6 h-6 text-green-500" />,
     link: "/sports-highlights",
     features: [
