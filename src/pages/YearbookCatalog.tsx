@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Search, Tag, Sparkles, ArrowRight } from "lucide-react";
+import { Search, Tag, Sparkles, ArrowRight, Image, Layout, MessageSquare } from "lucide-react";
 
 const YearbookCatalog = () => {
   return (
@@ -12,11 +12,12 @@ const YearbookCatalog = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-purple-900 mb-6">
-            Yearbook Image Management
-          </h1>
+          <h1 className="text-5xl font-bold text-framed-900 mb-2">Framed</h1>
+          <h2 className="text-4xl font-bold text-purple-900 mb-6">
+            Yearbook Creation Suite
+          </h2>
           <p className="text-xl text-purple-700 max-w-2xl mx-auto">
-            Streamline your yearbook creation process with AI-powered image organization and smart suggestions
+            Empower your yearbook staff with AI-powered image organization and smart content suggestions
           </p>
         </motion.div>
 
@@ -25,46 +26,64 @@ const YearbookCatalog = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
           >
-            <div className="space-y-2">
-              <Search className="h-8 w-8 text-purple-500" />
-              <h3 className="text-2xl font-semibold text-purple-900">
-                Smart Image Search
-              </h3>
-              <p className="text-purple-700">
-                Quickly find photos by student name, event, club, or any custom tag. Our AI-powered search makes image organization effortless.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <Tag className="h-8 w-8 text-purple-500" />
-              <h3 className="text-2xl font-semibold text-purple-900">
-                Automated Tagging
-              </h3>
-              <p className="text-purple-700">
-                Save time with automatic face recognition and event tagging. Our system learns and suggests relevant tags for your photos.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <Sparkles className="h-8 w-8 text-purple-500" />
-              <h3 className="text-2xl font-semibold text-purple-900">
-                AI Layout Assistant
-              </h3>
-              <p className="text-purple-700">
-                Get smart suggestions for photo placement and captions based on your yearbook templates and content guidelines.
-              </p>
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <div className="bg-purple-50 rounded-xl p-4 mb-4">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <Tag className="h-5 w-5 text-purple-500" />
+                    <span className="text-sm font-medium text-purple-700">Smart Tags</span>
+                  </div>
+                  <Button variant="ghost" size="sm">
+                    <Search className="h-4 w-4" />
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-purple-100 rounded-lg"></div>
+                  <div className="aspect-video bg-purple-100 rounded-lg"></div>
+                  <div className="aspect-video bg-purple-100 rounded-lg"></div>
+                  <div className="aspect-video bg-purple-100 rounded-lg"></div>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="h-4 bg-purple-100 rounded w-3/4"></div>
+                <div className="h-4 bg-purple-100 rounded w-1/2"></div>
+              </div>
             </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
           >
-            <img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-              alt="Yearbook creation process"
-              className="rounded-2xl shadow-lg"
-            />
+            <div className="space-y-2">
+              <Tag className="h-8 w-8 text-purple-500" />
+              <h3 className="text-2xl font-semibold text-purple-900">
+                Smart Image Tagging
+              </h3>
+              <p className="text-purple-700">
+                Automatically tag photos with student names, events, and activities
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Layout className="h-8 w-8 text-purple-500" />
+              <h3 className="text-2xl font-semibold text-purple-900">
+                Template Integration
+              </h3>
+              <p className="text-purple-700">
+                Upload your yearbook templates and get AI-powered layout suggestions
+              </p>
+            </div>
+            <div className="space-y-2">
+              <MessageSquare className="h-8 w-8 text-purple-500" />
+              <h3 className="text-2xl font-semibold text-purple-900">
+                Caption Generation
+              </h3>
+              <p className="text-purple-700">
+                Get AI-generated caption suggestions for your yearbook photos
+              </p>
+            </div>
           </motion.div>
         </div>
 
@@ -72,6 +91,37 @@ const YearbookCatalog = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+          className="bg-white rounded-2xl shadow-lg p-8 mb-12"
+        >
+          <h3 className="text-2xl font-bold text-purple-900 mb-4">Features</h3>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="p-4 bg-purple-50 rounded-xl">
+              <Search className="h-6 w-6 text-purple-500 mb-2" />
+              <h4 className="font-semibold mb-1">Quick Search</h4>
+              <p className="text-sm text-gray-600">Find photos instantly by name or event</p>
+            </div>
+            <div className="p-4 bg-purple-50 rounded-xl">
+              <Tag className="h-6 w-6 text-purple-500 mb-2" />
+              <h4 className="font-semibold mb-1">Auto-Tagging</h4>
+              <p className="text-sm text-gray-600">AI identifies and tags people automatically</p>
+            </div>
+            <div className="p-4 bg-purple-50 rounded-xl">
+              <Layout className="h-6 w-6 text-purple-500 mb-2" />
+              <h4 className="font-semibold mb-1">Smart Layout</h4>
+              <p className="text-sm text-gray-600">Get AI-powered design suggestions</p>
+            </div>
+            <div className="p-4 bg-purple-50 rounded-xl">
+              <MessageSquare className="h-6 w-6 text-purple-500 mb-2" />
+              <h4 className="font-semibold mb-1">Auto Captions</h4>
+              <p className="text-sm text-gray-600">Generate engaging photo captions</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
           <Button
